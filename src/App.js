@@ -23,7 +23,22 @@ function App() {
     countWard:0
   });
 
+  const totalitems = (numClicks.countBeds+numClicks.countRefri+numClicks.countFurni+numClicks.countOven+numClicks.countSofa
+    +numClicks.countTV+numClicks.countWasher+numClicks.countDining+numClicks.countDesk+numClicks.countWard);
+
+  const totalm =  Number(((numClicks.countBeds*Items[0].area)+(numClicks.countRefri*Items[1].area)+(numClicks.countFurni*Items[2].area)
+    +(numClicks.countOven*Items[3].area)+(numClicks.countSofa*Items[4].area)+(numClicks.countTV*Items[5].area)
+    +(numClicks.countWasher*Items[6].area)+(numClicks.countDining*Items[7].area)+(numClicks.countDesk*Items[8].area)
+    +(numClicks.countWard*Items[9].area)).toFixed(2));
+
+  const subtotal = Number((totalm*200).toFixed(2));
+  const tax = Number((subtotal*.16).toFixed(2));
+  const total = Number((tax + subtotal).toFixed(2));
+  const duetoday = Number((total / 2).toFixed(2));
+    
   return (
+
+  
     <div className="App">
       <header className="header">  
         <img
@@ -127,21 +142,37 @@ function App() {
           />
         </div>
         <div className="botonesC">
-          <button className="clear">
+          <button 
+            className="clear"
+            onClick={()=>{setNumClicks({...numClicks,
+              countBeds:0,
+              countRefri:0,
+              countFurni:0,
+              countOven:0,
+              countSofa:0,
+              countTV:0,
+              countWasher:0,
+              countDining:0,
+              countDesk:0,
+              countWard:0 })}} 
+            >
             Clear
-          </button>
-          <button className="calculate">
-            Calculate
           </button>
         </div>
         <h2>Summary</h2>
         <div className="summary">
-           <p>Total items:  X</p>
-           <p>Total M<sup>2</sup>:  X</p>
-           <p>Subtotal: X</p>
-           <p>Tax:  X</p>
-           <p><b>Total:  X</b></p>
-           <p><b>Due today 50%:  X</b></p>
+           <p>
+            Total items: {totalitems}
+           </p>
+           <p>
+            Total M<sup>2</sup>: {totalm}   
+           </p>
+           <p>
+            Subtotal: ${subtotal}
+           </p>
+           <p>Tax: ${tax}</p>
+           <p><b>Total: ${total}</b></p>
+           <p><b>Due today 50%: ${duetoday}</b></p>
         </div>
       </main>
   
