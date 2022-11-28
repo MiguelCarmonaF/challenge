@@ -4,7 +4,8 @@ import facebook from "./Imagenes/facebook.png";
 import twitter from "./Imagenes/twitter.png";
 import instagram from "./Imagenes/instagram.png";
 import whatsapp from "./Imagenes/whatsapp.png";
-
+import Card from "./Componentes/Card.js"
+import Items from './Componentes/ObjetoCard.js';
 
 function App() {
   return (
@@ -27,6 +28,58 @@ function App() {
         <h1>What items to store?</h1>
         <p>Select which items you wish to store before moving to</p>
         <p>your new home. We will keep them safe!</p>
+        <div className="tarjetas">
+          <Card
+            nombre={Items[0].nombre}
+            imagen={Items[0].imagen}
+            descripcionImagen={Items[0].descripcionImagen}
+          />
+          <Card
+            nombre={Items[1].nombre}
+            imagen={Items[1].imagen}
+            descripcionImagen={Items[1].descripcionImagen}
+          />
+          <Card
+            nombre={Items[2].nombre}
+            imagen={Items[2].imagen}
+            descripcionImagen={Items[2].descripcionImagen}
+          />
+          <Card
+            nombre={Items[3].nombre}
+            imagen={Items[3].imagen}
+            descripcionImagen={Items[3].descripcionImagen}
+          />
+          <Card
+            nombre={Items[4].nombre}
+            imagen={Items[4].imagen}
+            descripcionImagen={Items[4].descripcionImagen}
+          />
+          <Card
+            nombre={Items[5].nombre}
+            imagen={Items[5].imagen}
+            descripcionImagen={Items[5].descripcionImagen}
+          />
+          <Card
+            nombre={Items[6].nombre}
+            imagen={Items[6].imagen}
+            descripcionImagen={Items[6].descripcionImagen}
+          />
+          <Card
+            nombre={Items[7].nombre}
+            imagen={Items[7].imagen}
+            descripcionImagen={Items[7].descripcionImagen}
+          />
+          <Card
+            nombre={Items[8].nombre}
+            imagen={Items[8].imagen}
+            descripcionImagen={Items[8].descripcionImagen}
+          />
+          <Card
+            nombre={Items[9].nombre}
+            imagen={Items[9].imagen}
+            descripcionImagen={Items[9].descripcionImagen}
+          />
+        </div>
       </main>
   
       <footer className="footer">
