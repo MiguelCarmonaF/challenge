@@ -80,6 +80,23 @@ function App() {
             descripcionImagen={Items[9].descripcionImagen}
           />
         </div>
+        <div className="botonesC">
+          <button className="clear">
+            Clear
+          </button>
+          <button className="calculate">
+            Calculate
+          </button>
+        </div>
+        <h2>Summary</h2>
+        <div className="summary">
+           <p>Total items:  X</p>
+           <p>Total M<sup>2</sup>:  X</p>
+           <p>Subtotal: X</p>
+           <p>Tax:  X</p>
+           <p><b>Total:  X</b></p>
+           <p><b>Due today 50%:  X</b></p>
+        </div>
       </main>
   
       <footer className="footer">

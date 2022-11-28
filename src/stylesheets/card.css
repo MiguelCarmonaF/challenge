@@ -18,7 +18,7 @@
   }
 
 .button {
-    border: none;
+    border: .5px solid black;
     color: black; 
     padding: 15px 20px;
     text-align: center;
@@ -48,5 +48,6 @@
 .number{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: 0.3s;
-    width: 50%;
+    width: 49%;
+    border: .5px solid black;
 }

@@ -94,3 +94,55 @@ h1{
   align-items: center;
 }
 
+.clear{
+  background-color: #FFFFFF;
+  border: 2px solid #FD9255;
+  color: black; 
+  padding: 15px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.clear:hover{
+  background-color: #49d3d3;
+  transition: 0.7s;
+}
+
+.calculate{
+  background-color: #FD9255;
+  border: 2px solid #FD9255;
+  color: black; 
+  padding: 15px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.calculate:hover{
+  background-color: #49d3d3;
+  transition: 0.7s;
+}
+
+.botonesC{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+h2{
+  font-size:30px;
+}
+
+.summary{
+  background-color: #F9F9F9;
+  margin-bottom: 40px;
+}
