@@ -6,8 +6,23 @@ import instagram from "./Imagenes/instagram.png";
 import whatsapp from "./Imagenes/whatsapp.png";
 import Card from "./Componentes/Card.js"
 import Items from './Componentes/ObjetoCard.js';
+import { useState} from "react";
 
 function App() {
+
+  const [numClicks, setNumClicks] = useState({
+    countBeds:0,
+    countRefri:0,
+    countFurni:0,
+    countOven:0,
+    countSofa:0,
+    countTV:0,
+    countWasher:0,
+    countDining:0,
+    countDesk:0,
+    countWard:0
+  });
+
   return (
     <div className="App">
       <header className="header">  
@@ -33,51 +48,82 @@ function App() {
             nombre={Items[0].nombre}
             imagen={Items[0].imagen}
             descripcionImagen={Items[0].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks, countBeds: numClicks.countBeds+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countBeds: numClicks.countBeds-1})}}
+            numClicks={numClicks.countBeds}
           />
           <Card
             nombre={Items[1].nombre}
             imagen={Items[1].imagen}
             descripcionImagen={Items[1].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countRefri: numClicks.countRefri+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countRefri: numClicks.countRefri-1})}}
+            numClicks={numClicks.countRefri}
           />
           <Card
             nombre={Items[2].nombre}
             imagen={Items[2].imagen}
             descripcionImagen={Items[2].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countFurni: numClicks.countFurni+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countFurni: numClicks.countFurni-1})}}
+            numClicks={numClicks.countFurni}
           />
           <Card
             nombre={Items[3].nombre}
             imagen={Items[3].imagen}
             descripcionImagen={Items[3].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countOven: numClicks.countOven+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countOven: numClicks.countOven-1})}}
+            numClicks={numClicks.countOven}
           />
           <Card
             nombre={Items[4].nombre}
             imagen={Items[4].imagen}
             descripcionImagen={Items[4].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countSofa: numClicks.countSofa+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countSofa: numClicks.countSofa-1})}}
+            numClicks={numClicks.countSofa}
+  
           />
           <Card
             nombre={Items[5].nombre}
             imagen={Items[5].imagen}
             descripcionImagen={Items[5].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countTV: numClicks.countTV+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countTV: numClicks.countTV-1})}}
+            numClicks={numClicks.countTV}
           />
           <Card
             nombre={Items[6].nombre}
             imagen={Items[6].imagen}
             descripcionImagen={Items[6].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countWasher: numClicks.countWasher+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countWasher: numClicks.countWasher-1})}}
+            numClicks={numClicks.countWasher}
           />
           <Card
             nombre={Items[7].nombre}
             imagen={Items[7].imagen}
             descripcionImagen={Items[7].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countDining: numClicks.countDining+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countDining: numClicks.countDining-1})}}
+            numClicks={numClicks.countDining}
           />
           <Card
             nombre={Items[8].nombre}
             imagen={Items[8].imagen}
             descripcionImagen={Items[8].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countDesk: numClicks.countDesk+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countDesk: numClicks.countDesk-1})}}
+            numClicks={numClicks.countDesk}
           />
           <Card
             nombre={Items[9].nombre}
             imagen={Items[9].imagen}
             descripcionImagen={Items[9].descripcionImagen}
+            sumarClicks={()=>{setNumClicks({...numClicks,countWard: numClicks.countWard+1})}}
+            restarClicks={()=>{setNumClicks({...numClicks,countWard: numClicks.countWard-1})}}
+            numClicks={numClicks.countWard}
           />
         </div>
         <div className="botonesC">

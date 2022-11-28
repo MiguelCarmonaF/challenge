@@ -1,32 +1,38 @@
 import React from "react";
 import "../stylesheets/card.css"
 
-function Card(props){
+function Card({imagen,descripcionImagen,nombre,numClicks,sumarClicks,restarClicks}){
     return(
     <>   
         <div className="size">
             <div className="card">
                 <img 
-                src={require(`../Imagenes/${props.imagen}.png`)}
-                alt={props.descripcionImagen}
+                src={require(`../Imagenes/${imagen}.png`)}
+                alt={descripcionImagen}
                 />
                 <div className="container">
                     <p className="texto-nombre">
-                        {props.nombre}
+                        {nombre}
                     </p>
                 </div>
             </div>
             <div className="counter">
                 <div>
-                    <button className="button">
+                    <button 
+                    className="button"
+                    onClick={sumarClicks}
+                    >
                     +
                     </button>
                 </div>
                 <div className="number">
-                <p>Num</p>
+                <p>{numClicks}</p>
                 </div>
                 <div>
-                    <button className="button">
+                    <button 
+                    className="button"
+                    onClick={restarClicks}
+                    >
                     -
                     </button>
                 </div>
